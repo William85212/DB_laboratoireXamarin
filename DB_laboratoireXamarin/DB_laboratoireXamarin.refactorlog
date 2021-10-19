@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="e32d1a79-93ae-4fc4-ad42-d2bedd060fc2" ChangeDateTime="10/19/2021 07:44:12">
+    <Property Name="ElementName" Value="[dbo].[Movie].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1c864496-91e4-4f46-a1cf-e473c68310f9" ChangeDateTime="10/19/2021 07:45:35">
+    <Property Name="ElementName" Value="[dbo].[Movie].[title]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Title" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ccb7e31d-9782-41a4-b0e8-ceb690599bcf" ChangeDateTime="10/19/2021 07:45:40">
+    <Property Name="ElementName" Value="[dbo].[Movie].[releaseYear]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ReleaseYear" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3a743fcf-c7ac-4e9b-b80c-13e7c74b6dde" ChangeDateTime="10/19/2021 07:45:43">
+    <Property Name="ElementName" Value="[dbo].[Movie].[synopsis]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Synopsis" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="26e50393-f446-49e9-a081-3ef7f19d99a5" ChangeDateTime="10/19/2021 07:45:47">
+    <Property Name="ElementName" Value="[dbo].[Movie].[posterUrl]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PosterUrl" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="eec8c409-8c41-488c-aa13-7ed248e03f44" ChangeDateTime="10/19/2021 07:45:53">
+    <Property Name="ElementName" Value="[dbo].[Movie].[realisatorId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RealisatorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="45f13b8b-9eb3-4df1-86e8-f15a3b0ee69f" ChangeDateTime="10/19/2021 07:45:57">
+    <Property Name="ElementName" Value="[dbo].[Movie].[scenaristeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ScenaristeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5ae219b6-9bdf-4b99-8951-9141e654d410" ChangeDateTime="10/19/2021 07:46:14">
+    <Property Name="ElementName" Value="[dbo].[Movie].[id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdMovie" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3ec996f9-4cf2-45a2-a0d9-4db94ef1c781" ChangeDateTime="10/19/2021 07:47:00">
+    <Property Name="ElementName" Value="[dbo].[Movie].[Synopsis]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Resume" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2d10f79f-dc2c-4a7b-a596-29b5aeaf8edb" ChangeDateTime="10/19/2021 07:47:15">
+    <Property Name="ElementName" Value="[dbo].[Movie].[PosterUrl]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ImageMovie" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="50caa757-efb3-4842-be45-d57fef2a59f7" ChangeDateTime="10/19/2021 07:47:32">
+    <Property Name="ElementName" Value="[dbo].[Movie].[ReleaseYear]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Movie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateSortie" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="45dcaf75-2c85-405b-924e-818439f3dfbd" ChangeDateTime="10/19/2021 07:50:04">
+    <Property Name="ElementName" Value="[dbo].[PMovie].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PMovie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdPMovie" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="61adb5bf-8699-4c19-859d-331d32ebe1b8" ChangeDateTime="10/19/2021 07:53:44">
+    <Property Name="ElementName" Value="[dbo].[Categorie].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Categorie]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdCategorie" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="61a2d334-a11b-47c8-8af9-1e3fb1165b01" ChangeDateTime="10/19/2021 07:55:11">
+    <Property Name="ElementName" Value="[dbo].[Person].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Person]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdPerson" />
+  </Operation>
+</Operations>
