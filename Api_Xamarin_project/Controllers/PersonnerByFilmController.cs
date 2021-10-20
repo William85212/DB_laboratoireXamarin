@@ -11,20 +11,20 @@ namespace Api_Xamarin_project.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class InfoMovieController : ControllerBase
+    public class PersonnerByFilmController : ControllerBase
     {
-        private IInfoMovieService _service;
-
-        public InfoMovieController(IInfoMovieService service)
+        private IPersonByFilmService _service;
+        public PersonnerByFilmController(IPersonByFilmService service)
         {
             _service = service;
         }
-        [HttpGet]
-        public IActionResult Get(int idMovie)
+
+        [HttpGet("{idMovie}")]
+        public IActionResult GetPersonByFilm(int idMovie)
         {
             try
             {
-                return Ok(_service.Get(idMovie));
+                return Ok(_service.GetPerson(idMovie).Select(pbf => pbf));
             }
             catch (Exception)
             {

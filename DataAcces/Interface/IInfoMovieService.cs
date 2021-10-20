@@ -6,6 +6,6 @@ namespace DataAcces.Interface
     public interface IInfoMovieService
     {
         InfoMovieModel Converteur(IDataReader reader);
-        InfoMovieModel Get();
+        InfoMovieModel Get(int idMovie);
     }
 }

@@ -22,11 +22,12 @@ namespace DataAcces.Services
             _connection = new Connection(SqlClientFactory.Instance, _connString);
         }
 
-        public InfoMovieModel Get()
+        public InfoMovieModel Get(int idMovie)
         {
-            Command command = new Command("select m.Title, m.DateSortie, m.ImageMovie, p.FirstName + ' ' +p.LastName as realisateur, (select  p.FirstName + ' ' + p.LastName from Movie m join Person p on m.ScenaristeId = p.IdPerson where IdMovie = 1) as Scenariste from Movie m join Categorie c on c.IdCategorie = m.CategorieId join Person p on p.IdPerson = m.RealisatorId where IdMovie = 1");
+            Command command = new Command("select m.Title, m.DateSortie, m.ImageMovie, m.PersonnalComment, p.FirstName + ' ' +p.LastName as Realisateur, (select  p.FirstName + ' ' + p.LastName from Movie m join Person p on m.ScenaristeId = p.IdPerson where IdMovie = @idOne) as 'Scenariste' from Movie m join Categorie c on c.IdCategorie = m.CategorieId join Person p on p.IdPerson = m.RealisatorId where IdMovie = @idTwo");
 
-           // command.AddParameter("idMovie", idMovie);
+            command.AddParameter("idOne", idMovie);
+            command.AddParameter("idTwo", idMovie);
 
             _connection.Open();
             InfoMovieModel infoMovie = _connection.ExecuteReader(command, Converteur).First();
@@ -44,9 +45,9 @@ namespace DataAcces.Services
                 Title = reader["Title"].ToString(),
                 DateSortie = (DateTime)reader["DateSortie"],
                 ImageMovie = reader["ImageMovie"].ToString(),
-                Realisteur = reader["realisateur"].ToString(),
+                Realisateur = reader["Realisateur"].ToString(),
                 Scenariste = reader["Scenariste"].ToString(),
-                //PersonnalComment = reader["PersonnalComment"].ToString()
+                PersonnalComment = reader["PersonnalComment"].ToString()
             };
         }
     }
