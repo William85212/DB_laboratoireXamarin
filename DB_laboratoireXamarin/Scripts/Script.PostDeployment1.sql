@@ -44,7 +44,7 @@ insert into Person (FirstName, LastName, PictureUrl) values ('Kate', 'Winsley', 
 
 insert into Movie (Title, DateSortie, [Resume], ImageMovie, RealisatorId, ScenaristeId, CategorieId, PersonnalComment)
 values ('Terminator', '01-01-1984', 'Terminator (The Terminator) est un film de science-fiction américain réalisé par James Cameron, sorti en 1984, avec, dans les rôles principaux, Arnold Schwarzenegger, Michael Biehn et Linda Hamilton.'
-,'???', 1, 1, 1,'the best')
+,'https://m.media-amazon.com/images/I/A1wiVBc2VLL._AC_SL1500_.jpg', 1, 1, 1,'the best')
 
 insert into Movie (Title, DateSortie, [Resume], ImageMovie, RealisatorId, ScenaristeId, CategorieId, PersonnalComment)
 values ('Titanic', '01-01-1997', 'Titanic est un film dramatique américain écrit, produit et réalisé par James Cameron, sorti en 1997.
