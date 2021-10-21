@@ -23,7 +23,7 @@ namespace DataAcces.Services
         }
         public IEnumerable<DetailsPersonModel> GetInfoPerson(int idPerson)
         {
-            Command command = new Command("select m.ImageMovie, p.IdPerson, p.FirstName + ' ' + p.LastName as NomComplet, pm.Role, m.Title from Movie m join PMovie pm on m.IdMovie = pm.MovieId join Person p on pm.PersonId = p.IdPerson where pm.PersonId = @idP");
+            Command command = new Command("select p.PictureUrl as ImageMovie, p.IdPerson, p.FirstName + ' ' + p.LastName as NomComplet, pm.Role, m.Title from Movie m join PMovie pm on m.IdMovie = pm.MovieId join Person p on pm.PersonId = p.IdPerson where pm.PersonId = @idP");
             command.AddParameter("idP", idPerson);
 
             _connection.Open();

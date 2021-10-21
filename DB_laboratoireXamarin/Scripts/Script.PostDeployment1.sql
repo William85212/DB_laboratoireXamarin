@@ -34,7 +34,7 @@ insert into Categorie([Name]) values ('Science Fiction')
 insert into Categorie([Name]) values ('Drame Romantique')
 
 
-insert into Person (FirstName, LastName, PictureUrl) values ('James', 'Cammeron','https:///www.google.com/imgres?imgurl=https%3A%2F%2Fwww.babelio.com%2Fusers%2FAVT_James-Cameron_7491.jpeg&imgrefurl=https%3A%2F%2Fwww.babelio.com%2Fauteur%2FJames-Cameron%2F69961&tbnid=z3rr40q_fDQTEM&vet=12ahUKEwie9dnIl9bzAhUN9BoKHV-rCFkQMygDegUIARCXAQ..i&docid=opHysgoJTHIXWM&w=310&h=221&itg=1&q=james%20cameron&ved=2ahUKEwie9dnIl9bzAhUN9BoKHV-rCFkQMygDegUIARCXAQ')
+insert into Person (FirstName, LastName, PictureUrl) values ('James', 'Cammeron','https://www.babelio.com/users/AVT_James-Cameron_7491.jpeg')
 insert into Person (FirstName, LastName, PictureUrl) values ('Arnold', 'Schwarzenegger', 'https:///www.google.com/imgres?imgurl=https%3A%2F%2Fresize-parismatch.lanmedia.fr%2Fr%2F940%2C628%2Ccenter-middle%2Fimg%2Fvar%2Fnews%2Fstorage%2Fimages%2Fparis-match%2Fculture%2Fcinema%2Farnold-schwarzenegger-ses-films-et-sa-carriere-en-photos-769530%2F8135892-1-fre-FR%2FIl-etait-une-fois-Arnold-Schwarzenegger.jpg&imgrefurl=https%3A%2F%2Fwww.parismatch.com%2FCulture%2FCinema%2FArnold-Schwarzenegger-ses-films-et-sa-carriere-en-photos-769530&tbnid=X02u-HodNAG-qM&vet=12ahUKEwif2KzZl9bzAhUO0xoKHSziB8MQMygCegUIARDRAQ..i&docid=QmMj0KqmCAPCFM&w=940&h=628&q=arnold%20schwarzenegger&ved=2ahUKEwif2KzZl9bzAhUO0xoKHSziB8MQMygCegUIARDRAQ')
 insert into Person (FirstName, LastName, PictureUrl) values ('Leonardo', 'DiCaprio', '')
 insert into Person (FirstName, LastName, PictureUrl) values ('Kate', 'Winsley', '??')
