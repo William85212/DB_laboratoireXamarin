@@ -14,5 +14,6 @@ namespace DataAcces.Models
         public string Realisateur { get; set; }
         public string Scenariste { get; set; }
         public string PersonnalComment { get; set; }
+        public string Resume { get; set; }
     }
 }

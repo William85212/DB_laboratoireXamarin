@@ -1,0 +1,7 @@
+﻿CREATE FUNCTION [dbo].[getSecretKey]()
+
+RETURNS varchar(200)
+AS
+BEGIN
+	RETURN 'Ma secret key 2CB3DF92-ACB7-49D4-8B7D-8601EEF8F31Bdfdfdfdfdfdf'
+END

@@ -1,7 +1,8 @@
 ﻿CREATE TABLE [dbo].[User]
 (
-	[Id] INT NOT NULL , 
+	[IdUser] INT NOT NULL identity, 
     [Email] NVARCHAR(200) NOT NULL, 
     [Password] VARBINARY(64) NOT NULL, 
-    CONSTRAINT [PK_User] PRIMARY KEY ([Id])
+    [TokenForgot] NVARCHAR(MAX) NULL, 
+    CONSTRAINT [PK_User] PRIMARY KEY ([IdUser])
 )
