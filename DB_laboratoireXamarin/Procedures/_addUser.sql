@@ -12,9 +12,9 @@ AS
 			set @secretKey = dbo.getSecretKey();
 
 			declare @password_hash varbinary(64);
-			set @password_hash = HASHBYTES('SHA2_512', concat(@salt, @password,@secretKey, @salt))
+			set @password_hash =  HASHBYTES('SHA2_512', concat(@salt, @password, @secretKey, @salt))
 
-			insert into [User] (email, [password])
+			insert into [User] (Email, [Password])
 			output Inserted.IdUser
 			values ( @email, @password_hash)
 

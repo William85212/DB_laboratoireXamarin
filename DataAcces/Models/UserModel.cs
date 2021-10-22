@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataAcces.Models
 {
-    class UserModel
+    public class UserModel
     {
-        public int Id { get; set; }
+        public int IdUser { get; set; }
         public string Email { get; set; }
-        public byte[] Password { get; set; }
+        public string Password { get; set; }
         public string TokenForgot { get; set; }
     }
 }

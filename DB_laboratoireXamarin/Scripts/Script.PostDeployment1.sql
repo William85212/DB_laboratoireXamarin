@@ -57,6 +57,6 @@ Modèle de script de post-déploiement
 --insert into PMovie([Role], MovieId, PersonId) values ('Rose', 2, 4)
 --insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 2, 1)
 
---exec _addUser 'wil85212@gmail.com', 'william_hardy';
---exec _addUser 'hugo@gmail.com', 'hugo_hardy';
---exec _addUser 'fucanClaudy@gmail.com', 'claudy_faucan';
+exec _addUser 'wil85212@gmail.com', 'william_hardy';
+exec _addUser 'hugo@gmail.com', 'hugo_hardy';
+exec _addUser 'fucanClaudy@gmail.com', 'claudy_faucan';

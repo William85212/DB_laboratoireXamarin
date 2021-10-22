@@ -32,6 +32,7 @@ namespace Api_Xamarin_project
             services.AddTransient<IInfoMovieService, InfoMovieService>();
             services.AddTransient<IPersonByFilmService, PersonByFilmService>();
             services.AddTransient<IDetailPersonService, DetailPersonService>();
+            services.AddTransient<IUserService, UserService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
