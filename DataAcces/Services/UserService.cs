@@ -49,6 +49,17 @@ namespace DataAcces.Services
             return model;
         }
 
+        public IEnumerable<UserModel> GetAll()
+        {
+            Command command = new Command("select * from [User]");
+
+            _connection.Open();
+            IEnumerable<UserModel> um = _connection.ExecuteReader(command, Converteur).ToList();
+            _connection.Close();
+
+            return um;
+        }
+
         public UserModel Converteur(IDataReader reader)
         {
             return new UserModel
@@ -56,7 +67,7 @@ namespace DataAcces.Services
                 IdUser = (int)reader["IdUser"],
                 Email = reader["Email"].ToString(),
                 Password = Encoding.ASCII.GetString((byte[])reader["password"]),
-                TokenForgot = reader["TokenForgot"] is null ? null : (string)reader["TokenForgot"]
+                //TokenForgot = reader["TokenForgot"] is null ? null : (string)reader["TokenForgot"]
             };
         }
     }
