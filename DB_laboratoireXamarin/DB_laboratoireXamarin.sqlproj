@@ -71,6 +71,7 @@
     <Build Include="Procedures\_addUser.sql" />
     <Build Include="Procedures\_loginUser.sql" />
     <Build Include="Tables\Favoris.sql" />
+    <Build Include="Procedures\_updatePassword.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DB_laboratoireXamarin.refactorlog" />

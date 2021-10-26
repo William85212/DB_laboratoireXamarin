@@ -62,5 +62,50 @@ namespace Api_Xamarin_project.Controllers
 
             return Ok(u);
         }
+
+        [HttpPost("NewPassword")]
+        public IActionResult NewLogin(NewLoginModel mdl)
+        {
+            try
+            {
+                _services.SetTokenForgot(mdl);
+                return Ok("TokenForgot is good");
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+
+            }
+
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            try
+            {
+                return Ok(_services.GetAll());
+            }
+            catch (Exception)
+            {
+
+                return BadRequest();
+            }
+        }
+
+        [HttpPut("setLogin")]
+        public IActionResult setNewLogin(SetNewPasswordModel nps)
+        {
+            try
+            {
+                _services.setNewPassword(nps);
+                return Ok();
+            }
+            catch (Exception)
+            {
+
+                return BadRequest();
+            }
+        }
     }
 }

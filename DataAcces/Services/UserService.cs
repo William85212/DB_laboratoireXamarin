@@ -60,6 +60,39 @@ namespace DataAcces.Services
             return um;
         }
 
+        public UserModel GetUsetByTokenForgot(string token)
+        {
+            Command command = new Command("select * from [User] where TokenForgot = @token");
+            _connection.Open();
+            UserModel um =  _connection.ExecuteReader(command, Converteur).SingleOrDefault();
+            _connection.Close();
+
+            return um;
+        }
+
+        public void setNewPassword(SetNewPasswordModel np)
+        {
+            Command command = new Command("_updatePassword", true);
+            command.AddParameter("token", np.Token);
+            command.AddParameter("newpassword", np.NewPassword);
+
+            _connection.Open();
+            _connection.ExecuteNonQuery(command);
+            _connection.Close();
+
+        }
+
+        public void SetTokenForgot(NewLoginModel mdl)
+        {
+            Command command = new Command("update  [User] set [TokenForgot] = @token where IdUser = @idUser");
+            command.AddParameter("token", mdl.Password);
+            command.AddParameter("idUser", mdl.IdUser);
+
+            _connection.Open();
+            _connection.ExecuteNonQuery(command);
+            _connection.Close();
+        }
+
         public UserModel Converteur(IDataReader reader)
         {
             return new UserModel

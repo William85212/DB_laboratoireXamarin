@@ -29,7 +29,6 @@ Modèle de script de post-déploiement
 
 
 
-
 --insert into Categorie([Name]) values ('Science Fiction')
 --insert into Categorie([Name]) values ('Drame Romantique')
 
@@ -47,9 +46,8 @@ Modèle de script de post-déploiement
 --,'https://m.media-amazon.com/images/I/A1wiVBc2VLL._AC_SL1500_.jpg', 1, 1, 1,'the best')
 
 --insert into Movie (Title, DateSortie, [Resume], ImageMovie, RealisatorId, ScenaristeId, CategorieId, PersonnalComment)
---values ('Titanic', '01-01-1997', 'Titanic est un film dramatique américain écrit, produit et réalisé par James Cameron, sorti en 1997.
---Intégrant à la fois des aspects historiques et fictifs, le film est basé sur le récit du naufrage du RMS Titanic et met en vedette Leonardo DiCaprio et Kate Winslet.'
---,'https::µ//www.google.com/url?sa=i&url=https%3A%2F%2Fwww.20minutes.fr%2Fculture%2F2198771-20180109-titanic-20-ans-apres-fin-film-toujours-remise-question-fans-place-deux-foutue-planche&psig=AOvVaw1F7CTEAzjBJZbZxNlaZqVB&ust=1634765572409000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKj3_ry21_MCFQAAAAAdAAAAABAD', 1, 1, 2,'rose se prend un cartouche')
+--values ('Titanic', '01-01-1997', 'Titanic est un film dramatique américain écrit, produit et réalisé par James Cameron, sorti en 1997. Intégrant à la fois des aspects historiques et fictifs, le film est basé sur le récit du naufrage du RMS Titanic et met en vedette Leonardo DiCaprio et Kate Winslet.'
+--, '' , 1, 1, 2,'rose se prend un cartouche')
 
 --insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 1, 2)
 --insert into PMovie([Role], MovieId, PersonId) values ('Terminator', 1, 1)
