@@ -6,7 +6,7 @@ namespace DataAcces.Model
 {
     public class CategorieModel
     {
-        public int IdCategorie { get; set; }
+        //public int IdCategorie { get; set; }
         public string Name { get; set; }
 
     }

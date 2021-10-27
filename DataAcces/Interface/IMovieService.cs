@@ -9,5 +9,7 @@ namespace DataAcces.Interface
         MovieModel Converteur(IDataReader reader);
         IEnumerable<MovieModel> GetAll();
         IEnumerable<MovieModel> GetByCategorie(string categorieName);
+        IEnumerable<CategorieModel> GetAllCategrie();
+        CategorieModel CatCon(IDataReader reader);
     }
 }

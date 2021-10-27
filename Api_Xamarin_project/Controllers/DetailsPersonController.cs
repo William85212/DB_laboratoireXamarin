@@ -1,4 +1,5 @@
 ﻿using DataAcces.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Api_Xamarin_project.Controllers
 {
+    [Authorize("user")]
     [Route("api/[controller]")]
     [ApiController]
     public class DetailsPersonController : ControllerBase

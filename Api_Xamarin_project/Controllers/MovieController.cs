@@ -47,5 +47,19 @@ namespace Api_Xamarin_project.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError);
             }
         }
+
+        [HttpGet("cat")]
+        public IActionResult GetAllCategorie()
+        {
+            try
+            {
+                return Ok(_service.GetAllCategrie());
+            }
+            catch (Exception)
+            {
+
+                return BadRequest();
+            }
+        }
     }
 }

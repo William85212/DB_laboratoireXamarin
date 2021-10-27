@@ -36,7 +36,9 @@ namespace DataAcces.Services
 
         public IEnumerable<MovieModel> GetByCategorie(string categorieName)
         {
-            Command command = new Command("");
+            Command command = new Command("select * from Movie m join Categorie c on m.CategorieId = c.IdCategorie where c.[Name] = @cat");
+            command.AddParameter("cat", categorieName);
+
             _connection.Open();
             IEnumerable<MovieModel> movieModels = _connection.ExecuteReader(command, Converteur).ToList();
             _connection.Close();
@@ -57,6 +59,27 @@ namespace DataAcces.Services
                 ScenaristeId = (int)reader["ScenaristeId"],
                 CategorieId = (int)reader["CategorieId"],
                 PersonnalComment = reader["PersonnalComment"].ToString()
+            };
+        }
+
+
+        public IEnumerable<CategorieModel> GetAllCategrie()
+        {
+            Command command = new Command("select [Name] from Categorie");
+
+            _connection.Open();
+            IEnumerable<CategorieModel> cm =  _connection.ExecuteReader<CategorieModel>(command, CatCon).ToList();
+            _connection.Close();
+
+            return cm;
+        }
+
+        public CategorieModel CatCon(IDataReader reader)
+        {
+            return new CategorieModel
+            {
+               // IdCategorie = (int)reader["IdCategorie"],
+                Name = reader["Name"].ToString()
             };
         }
     }
