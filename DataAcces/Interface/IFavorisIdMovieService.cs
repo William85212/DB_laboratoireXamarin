@@ -8,5 +8,7 @@ namespace DataAcces.Interface
     {
         FavoriIdMovie Converteur(IDataReader reader);
         IEnumerable<FavoriIdMovie> GetIdMovieFavoris(int idUser);
+        void DeleteFavoris(int IdMovie, int idUser);
+        void AddFavoris(FavMod m);
     }
 }

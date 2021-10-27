@@ -35,6 +35,29 @@ namespace DataAcces.Services
             return fim;
         }
 
+        public void DeleteFavoris(int IdMovie, int idUser)
+        {
+            Command command = new Command("Delete Favoris where IdUser = @idUser and IdMovie = @idMovie");
+            command.AddParameter("idUser", idUser);
+            command.AddParameter("idMovie", IdMovie);
+
+            _connection.Open();
+            _connection.ExecuteNonQuery(command);
+            _connection.Close(); 
+            
+        }
+
+        public void AddFavoris(FavMod m)
+        {
+            Command command = new Command(" insert into Favoris (IdMovie, IdUser) values (@idMovie, @idUser)");
+            command.AddParameter("idMovie", m.IdMovie);
+            command.AddParameter("idUser", m.IdUser);
+
+            _connection.Open();
+            _connection.ExecuteNonQuery(command);
+            _connection.Close();
+        }
+
         public FavoriIdMovie Converteur(IDataReader reader)
         {
             return new FavoriIdMovie

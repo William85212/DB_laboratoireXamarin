@@ -8,6 +8,7 @@ namespace DataAcces.Models
 {
     public class DetailsPersonModel
     {
+        public int IdMovie { get; set; }
         public string ImageMovie { get; set; }
         public int IdPerson { get; set; }
         public string NomComplet { get; set; }
