@@ -62,8 +62,65 @@ Modèle de script de post-déploiement
 --insert into Favoris (IdUser, IdMovie) values (1, 2);
 
 
+--insert into Categorie([Name]) values ('Science Fiction')
+--insert into Categorie([Name]) values ('Drame Romantique')
+
+
+--insert into Person (FirstName, LastName, PictureUrl) values ('James', 'Cammeron','https://www.babelio.com/users/AVT_James-Cameron_7491.jpeg')
+--insert into Person (FirstName, LastName, PictureUrl) values ('Arnold', 'Schwarzenegger', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Arnold_Schwarzenegger_1974.jpg/220px-Arnold_Schwarzenegger_1974.jpg')
+--insert into Person (FirstName, LastName, PictureUrl) values ('Leonardo', 'DiCaprio', 'https://fr.web.img5.acsta.net/pictures/15/06/24/14/36/054680.jpg')
+--insert into Person (FirstName, LastName, PictureUrl) values ('Kate', 'Winsley', 'https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/people/la-vie-des-people/news/titanic-pourquoi-kate-winslet-a-vecu-un-enfer-apres-la-sortie-du-film-3897894/94266511-1-fre-FR/Titanic-pourquoi-Kate-Winslet-a-vecu-un-enfer-apres-la-sortie-du-film.jpg')
+--insert into Person (FirstName, LastName, PictureUrl) values ('Lana', 'Wachowski', 'https://fr.web.img2.acsta.net/c_310_420/pictures/16/03/09/16/29/317444.jpg')
+--insert into Person (FirstName, LastName, PictureUrl) values ('Keanu', 'Reeve', 'https://fr.web.img5.acsta.net/c_310_420/pictures/17/02/06/17/01/343859.jpg')
+--insert into Person (FirstName, LastName, PictureUrl) values ('Carrie-Anne', 'Moss', 'https://fr.web.img2.acsta.net/c_310_420/pictures/15/11/18/14/21/140336.jpg')
+
+
+
+
+--insert into Movie (Title, DateSortie, [Resume], ImageMovie, RealisatorId, ScenaristeId, CategorieId, PersonnalComment)
+--values ('Terminator', '01-01-1984', 'Terminator (The Terminator) est un film de science-fiction américain réalisé par James Cameron, sorti en 1984, avec, dans les rôles principaux, Arnold Schwarzenegger, Michael Biehn et Linda Hamilton.'
+--,'https://www.premiere.fr/sites/default/files/styles/scale_crop_1280x720/public/2018-04/1200_e88n.jpg', 1, 1, 1,'the best')
+
+--insert into Movie (Title, DateSortie, [Resume], ImageMovie, RealisatorId, ScenaristeId, CategorieId, PersonnalComment)
+--values ('Titanic', '01-01-1997', 'Titanic est un film dramatique américain écrit, produit et réalisé par James Cameron, sorti en 1997. Intégrant à la fois des aspects historiques et fictifs, le film est basé sur le récit du naufrage du RMS Titanic et met en vedette Leonardo DiCaprio et Kate Winslet.'
+--, 'https://img.20mn.fr/CErtKaVbRdGYu9BfHjihKA/830x532_leonardo-dicaprio-kate-winslet-titanic.jpg' , 1, 1, 2,'rose se prend un cartouche')
+
+--insert into Movie (Title, DateSortie, [Resume], ImageMovie, RealisatorId, ScenaristeId, CategorieId, PersonnalComment)
+--values ('Matrix 4', '12-22-2021', 'Dix-huit ans après les événements de Matrix Revolutions, Thomas A. Anderson (alias Neo) ne se souvient plus de rien et mène une vie d''apparence normale à San Francisco. Il se rend régulièrement chez un psychiatre à qui il raconte ses rêves étranges et qui lui prescrit des pilules bleues. Après la réapparition de visages familiers et en quête de réponses, Neo repart à la recherche du lapin blanc. Il rencontre un certain Morpheus, qui lui offre le choix entre rester dans la Matrice et prendre son envol.'
+--, 'https://images.bfmtv.com/vlY0fBqH9WQ26GAb1K8vcaqe0_s=/120x2:1880x992/640x0/images/Keanu-Reeves-dans-The-Matrix-Resurrections-1123406.jpg' , 5, 5, 2,'dernier volet de la saga')
+
+
+--insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 1, 2)
+--insert into PMovie([Role], MovieId, PersonId) values ('Terminator', 1, 1)
+--insert into PMovie([Role], MovieId, PersonId) values ('Jack', 2, 3)
+--insert into PMovie([Role], MovieId, PersonId) values ('Rose', 2, 4)
+--insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 2, 1)
+--insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 3, 5)
+--insert into PMovie([Role], MovieId, PersonId) values ('Neo', 3, 6)
+--insert into PMovie([Role], MovieId, PersonId) values ('Trinity', 3, 7)
+
+--exec _addUser 'wil85212@gmail.com', 'william_hardy';
+--exec _addUser 'hugo@gmail.com', 'hugo_hardy';
+--exec _addUser 'fucanClaudy@gmail.com', 'claudy_faucan';
+
+--insert into Favoris (IdUser, IdMovie) values (1, 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
 insert into Categorie([Name]) values ('Science Fiction')
 insert into Categorie([Name]) values ('Drame Romantique')
+insert into Categorie([Name]) values ('Western')
+insert into Categorie([Name]) values ('All')
 
 
 insert into Person (FirstName, LastName, PictureUrl) values ('James', 'Cammeron','https://www.babelio.com/users/AVT_James-Cameron_7491.jpeg')
@@ -73,6 +130,11 @@ insert into Person (FirstName, LastName, PictureUrl) values ('Kate', 'Winsley', 
 insert into Person (FirstName, LastName, PictureUrl) values ('Lana', 'Wachowski', 'https://fr.web.img2.acsta.net/c_310_420/pictures/16/03/09/16/29/317444.jpg')
 insert into Person (FirstName, LastName, PictureUrl) values ('Keanu', 'Reeve', 'https://fr.web.img5.acsta.net/c_310_420/pictures/17/02/06/17/01/343859.jpg')
 insert into Person (FirstName, LastName, PictureUrl) values ('Carrie-Anne', 'Moss', 'https://fr.web.img2.acsta.net/c_310_420/pictures/15/11/18/14/21/140336.jpg')
+insert into Person (FirstName, LastName, PictureUrl) values ('Tom', 'Hardy', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Hardy_by_Gage_Skidmore.jpg/260px-Tom_Hardy_by_Gage_Skidmore.jpg')
+insert into Person (FirstName, LastName, PictureUrl) values ('Domhnall', 'Gleeson', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Domhnall_Gleeson_by_Gage_Skidmore.jpg/220px-Domhnall_Gleeson_by_Gage_Skidmore.jpg')
+insert into Person (FirstName, LastName, PictureUrl) values ('Will', 'Poulter', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Will_Poulter_2016.jpg/220px-Will_Poulter_2016.jpg')
+insert into Person (FirstName, LastName, PictureUrl) values ('Alejandro', 'Gonzales Inarritu', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Alejandro_Gonz%C3%A1lez_I%C3%B1%C3%A1rritu_2014.jpg/220px-Alejandro_Gonz%C3%A1lez_I%C3%B1%C3%A1rritu_2014.jpg')
+
 
 
 
@@ -87,17 +149,27 @@ values ('Titanic', '01-01-1997', 'Titanic est un film dramatique américain écr
 
 insert into Movie (Title, DateSortie, [Resume], ImageMovie, RealisatorId, ScenaristeId, CategorieId, PersonnalComment)
 values ('Matrix 4', '12-22-2021', 'Dix-huit ans après les événements de Matrix Revolutions, Thomas A. Anderson (alias Neo) ne se souvient plus de rien et mène une vie d''apparence normale à San Francisco. Il se rend régulièrement chez un psychiatre à qui il raconte ses rêves étranges et qui lui prescrit des pilules bleues. Après la réapparition de visages familiers et en quête de réponses, Neo repart à la recherche du lapin blanc. Il rencontre un certain Morpheus, qui lui offre le choix entre rester dans la Matrice et prendre son envol.'
-, 'https://images.bfmtv.com/vlY0fBqH9WQ26GAb1K8vcaqe0_s=/120x2:1880x992/640x0/images/Keanu-Reeves-dans-The-Matrix-Resurrections-1123406.jpg' , 5, 5, 2,'dernier volet de la saga')
+, 'https://images.bfmtv.com/vlY0fBqH9WQ26GAb1K8vcaqe0_s=/120x2:1880x992/640x0/images/Keanu-Reeves-dans-The-Matrix-Resurrections-1123406.jpg' , 5, 5, 1,'dernier volet de la saga')
+
+insert into Movie (Title, DateSortie, [Resume], ImageMovie, RealisatorId, ScenaristeId, CategorieId, PersonnalComment)
+values ('The Revenant', '01-01-2015', 'Dans une Amérique profondément sauvage, un groupe de trappeurs, dirigé par le capitaine et négociant en fourrures Andrew Henry, subit de lourdes pertes lors d''une attaque menée par les Amérindiens. En effet, alors que le trappeur Hugh Glass ainsi que deux de ses équipiers, dont son fils métis Hawk, chassent un orignal dans les bois, leur campement établi près d''une rivière est brutalement attaqué par des Arikaras, des Amérindiens du Dakota du Nord, qui massacrent sans pitié et pillent le camp. Trente-trois hommes périssent tandis que Glass, Hawk, Henry, John Fitzgerald, Jim Bridger et quelques autres hommes parviennent à prendre la fuite en bateau.'
+, 'https://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/01/fox_documentaire_the_revenant-640x344.jpg' , 11, 11, 3,'dernier volet de la saga')
 
 
 insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 1, 2)
-insert into PMovie([Role], MovieId, PersonId) values ('Terminator', 1, 1)
+insert into PMovie([Role], MovieId, PersonId) values ('Relisateur', 1, 1)
 insert into PMovie([Role], MovieId, PersonId) values ('Jack', 2, 3)
 insert into PMovie([Role], MovieId, PersonId) values ('Rose', 2, 4)
 insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 2, 1)
 insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 3, 5)
 insert into PMovie([Role], MovieId, PersonId) values ('Neo', 3, 6)
-insert into PMovie([Role], MovieId, PersonId) values ('Trinity', 3, 7)
+insert into PMovie([Role], MovieId, PersonId) values ('Trinity', 3, 11)
+insert into PMovie([Role], MovieId, PersonId) values ('Realisateur', 4, 11)
+insert into PMovie([Role], MovieId, PersonId) values ('Scénariste', 4, 11)
+insert into PMovie([Role], MovieId, PersonId) values ('Fitzgerald ', 4, 8)
+insert into PMovie([Role], MovieId, PersonId) values ('Hugh Glass', 4, 3)
+insert into PMovie([Role], MovieId, PersonId) values ('Andrew Henry', 4, 9)
+insert into PMovie([Role], MovieId, PersonId) values ('Jim Bridger', 4, 10)
 
 exec _addUser 'wil85212@gmail.com', 'william_hardy';
 exec _addUser 'hugo@gmail.com', 'hugo_hardy';
